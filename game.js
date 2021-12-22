@@ -2,10 +2,12 @@ class Game{
     constructor() {
         this.canvas = document.getElementById("game");
         this.context = this.canvas.getContext("2d");
+
         this.spriteImage = new Image();
         this.spriteImage.src = "flower.png";
+        
         const game = this;
-        this.spriteImage.onload = function(event){
+        this.spriteImage.onload = function(){
             const options = {
                 context: game.context, 
                 width: this.width,
